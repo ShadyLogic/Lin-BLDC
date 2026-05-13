@@ -1,0 +1,32 @@
+# Build output
+.pio/
+.pioenvs/
+.piolibdeps/
+build/
+dist/
+*.elf
+*.hex
+*.bin
+*.map
+
+# Arduino IDE
+*.ino.cpp
+*.with_bootloader.hex
+
+# Local editor and tooling state
+.vscode/
+.idea/
+*.swp
+*.swo
+*.tmp
+*.log
+
+# OS metadata
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Python cache from local PDF/tools work
+__pycache__/
+*.py[cod]
