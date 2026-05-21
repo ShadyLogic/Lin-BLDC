@@ -18,25 +18,28 @@ The drive host interface is a 9600 baud ASCII serial protocol over RS-232 or RS-
 
 LinBLDC drive(Serial1);
 
-void setup() {
-  Serial.begin(115200);
-  Serial1.begin(LinBLDC::DefaultBaud);
+void setup()
+{
+    Serial.begin(115200);
+    Serial1.begin(LinBLDC::DefaultBaud);
 
-  drive.disable();
-  drive.resetAlarms();
-  drive.setJogAcceleration(10.0f);
-  drive.setJogDeceleration(25.0f);
-  drive.setJogSpeed(1.0f);
-  drive.enable();
-  drive.startJog();
+    drive.disable();
+    drive.resetAlarms();
+    drive.setJogAcceleration(10.0f);
+    drive.setJogDeceleration(25.0f);
+    drive.setJogSpeed(1.0f);
+    drive.enable();
+    drive.startJog();
 }
 
-void loop() {
-  int32_t rpm = 0;
-  if (drive.velocityRpm(rpm)) {
-    Serial.println(rpm);
-  }
-  delay(500);
+void loop()
+{
+    int32_t rpm = 0;
+    if (drive.velocityRpm(rpm))
+    {
+        Serial.println(rpm);
+    }
+    delay(500);
 }
 ```
 

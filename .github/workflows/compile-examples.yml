@@ -28,6 +28,12 @@ jobs:
             board: teensy41
           - example: examples/MonitorStatus/MonitorStatus.ino
             board: esp32dev
+          - example: examples/CommunicationCheck/CommunicationCheck.ino
+            board: megaatmega2560
+          - example: examples/CommunicationCheck/CommunicationCheck.ino
+            board: teensy41
+          - example: examples/CommunicationCheck/CommunicationCheck.ino
+            board: esp32dev
 
     steps:
       - name: Check out repository
