@@ -380,6 +380,7 @@ bool LinBLDC::sendCommand(const char *commandText)
     _serial->print(commandText);
     _serial->write('\r');
     _serial->flush();
+    delay(10);
     return true;
 }
 
